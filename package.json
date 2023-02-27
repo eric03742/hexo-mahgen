@@ -1,0 +1,19 @@
+{
+  "name": "hexo-mahgen",
+  "version": "0.1.0",
+  "description": "Mahgen plugin for Hexo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hexo",
+    "plugin",
+    "mahgen"
+  ],
+  "author": "Eric Lee",
+  "license": "MIT",
+  "dependencies": {
+    "mahgen": "^0.3.1"
+  }
+}
