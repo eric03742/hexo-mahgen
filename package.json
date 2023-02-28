@@ -21,9 +21,6 @@
     "plugin",
     "mahgen"
   ],
-  "dependencies": {
-    "mahgen": "^0.3.1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/eric200203/hexo-mahgen"

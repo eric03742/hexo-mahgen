@@ -1,26 +1,19 @@
 /* global hexo */
 'use strict';
 
-const { Mahgen } = require('mahgen');
-
 /**
  *
  * @param args{string[]}
- * @return Promise<string>
+ * @return string
  */
 function handler(args) {
     if(args === null || args === undefined || args.length <= 0) {
-        return null;
+        return "";
     }
 
-    const seq = args[0];
-    return Mahgen.render(seq).then(src => {
-        return `<img src="${src}" alt="${seq}">`;
-    }).catch(err => {
-        return "";
-    });
+    return `<mah-gen data-seq="${args[0]}"}"></mah-gen>`;
 }
 
-hexo.extend.tag.register('mahgen', handler, {
-    async: true
-});
+hexo.extend.tag.register('mahgen', handler);
+
+hexo.extend.injector.register('body_end', '<script src="https://unpkg.com/mahgen/dist/index.umd.js">');
