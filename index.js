@@ -11,9 +11,9 @@ function handler(args) {
         return "";
     }
 
-    return `<mah-gen data-seq="${args[0]}"}"></mah-gen>`;
+    return `<mah-gen data-seq="${args[0]}"></mah-gen>`;
 }
 
 hexo.extend.tag.register('mahgen', handler);
 
-hexo.extend.injector.register('body_end', '<script src="https://unpkg.com/mahgen/dist/index.umd.js">');
+hexo.extend.injector.register('head_end', '<script src="https://unpkg.com/mahgen/dist/index.umd.js"></script>');
